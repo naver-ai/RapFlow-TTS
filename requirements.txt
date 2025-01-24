@@ -1,0 +1,36 @@
+
+--extra-index-url https://download.pytorch.org/whl/cu113
+torch==1.11.0+cu113
+--extra-index-url https://download.pytorch.org/whl/cu113
+torchvision==0.12.0+cu113
+--extra-index-url https://download.pytorch.org/whl/cu113
+torchaudio==0.11.0
+
+rootutils      
+pre-commit   
+rich         
+pytest        
+phonemizer==2.2.2  
+tensorboard
+librosa==0.9.2
+Cython
+numpy
+einops
+inflect
+Unidecode
+scipy
+matplotlib
+pandas
+conformer==0.3.2
+diffusers 
+notebook
+ipywidgets
+gradio==3.43.2
+gdown
+wget
+seaborn
+jiwer
+transformers==4.33.0
+resampy
+resemblyzer
+neptune

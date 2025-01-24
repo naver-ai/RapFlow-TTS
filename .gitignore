@@ -1,0 +1,9 @@
+.ruff_cache/
+__pycache__/
+.venv/
+
+hifigan/weights/*
+
+model/monotonic_align/build
+model/monotonic_align/*.c
+model/monotonic_align/model/monotonic_align/*.so

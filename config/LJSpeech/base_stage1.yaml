@@ -1,0 +1,88 @@
+resume:
+test_checkpoint: 
+checkpoint:      ./checkpoints-ljs
+dataset:         'LJSpeech'
+vocoder:         'hifigan'   ## vocoder & vocoder path 
+
+path:
+  train_path:     'filelists/LJSpeech/cleaned_train.txt'
+  val_path:       'filelists/LJSpeech/cleaned_valid.txt'
+  test_path:      'filelists/LJSpeech/cleaned_test.txt'
+  cmu_path:       'resources/cmu_dictionary'
+  vocoder_path:   'hifigan/weights'
+
+preprocess:
+  sample_rate: 22050
+  n_mels:      80
+  n_fft:       1024
+  hop_length:  256
+  win_length:  1024
+  f_min:       0
+  f_max:       8000
+  cleaner:     ['english_cleaners2']
+
+model:
+  prior_loss:  True
+  n_vocab:     178
+  add_blank:   True
+  n_feats:     80
+  n_spks:      1 # 110 for VCKT
+  spk_emb_dim: 64
+  data_stats:  [-5.517026, 2.064399] # data stats [mean, std], [0,1] for not use{'mel_mean': -5.517025947570801, 'mel_std': 2.0643999576568604} 
+
+  encoder:
+    encoder_type: 'RoPE Encoder'
+    encoder_params:
+      n_feats:            80
+      n_channels:         192
+      filter_channels:    768
+      filter_channels_dp: 256
+      n_heads:            2
+      n_layers:           6
+      kernel_size:        3
+      p_dropout:          0.1
+      spk_emb_dim:        64
+      n_spks:             1
+      prenet:             True
+    dp_params:
+      filter_channels_dp: 256
+      kernel_size:        3
+      p_dropout:          0.1
+
+  decoder:
+    channels:           [256, 256]
+    dropout:            0.05
+    attention_head_dim: 64
+    n_blocks:           1
+    num_mid_blocks:     2
+    num_heads:          2
+    act_fn:             'snakebeta'
+
+  cfm:
+    num_segments:   2
+    boundary:       0        # set for stage 1
+    alpha:          1e-5
+    total_epoch:    1400
+    delta_t:        [0.1, 0.001]
+    delta_schedule: 'linear'
+    delta_bin:      8 
+    use_d_schedule: False
+    loss_type:      'mse'
+
+train:
+  encoder_freeze:  False
+  stage:           1
+  epoch:           1400
+  batch_size:      32
+  save_epoch:      200
+  syn_every:       200
+  lr:              1e-4
+  max_grad:        5
+  amp:             False
+  fix_len:         2
+  out_size:        False
+  load_from_clean: True
+  load_from_disk:  False
+
+test:
+  ema:          True
