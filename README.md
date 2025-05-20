@@ -18,7 +18,7 @@ In this repository, we provide steps for running *RapFlow-TTS*.
 Clone this repository
 
 ```
-git clone https://open.oss.navercorp.com/voice-intern/RapFlow-TTS.git
+git clone https://github.com/naver-ai/RapFlow-TTS.git
 cd RapFlow-TTS/
 ```
 
