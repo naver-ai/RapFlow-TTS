@@ -236,7 +236,6 @@ For stage 3, we set additional 150 and 50 epochs for LJSpeech and VCTK datasets.
 	<img src="./img/train_disc loss_vctk.png" alt="Train Diss Loss VCTK" width="70%" height="70%"/>
 </p> -->
 
-※ We used 1400 (or vctk-1000) epochs for each Stage 1 and Stage 2, but 700(or vctk-500) epochs are enough. In Stage 3, checking the loss graph was the most accurate way to judge performance.
 
 ## Evaluation
 
