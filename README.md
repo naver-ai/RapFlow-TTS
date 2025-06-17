@@ -1,4 +1,4 @@
-# <img src="./img/mike.png" width="30px" align="center">RapFlow-TTS: Rapid High-Fidelity Text-to-Speech via Improved Consistency Flow Matching
+# <img src="./img/mike.png" width="30px" align="center">RapFlow-TTS: Rapid High-Fidelity Text-to-Speech via Improved Consistency Flow Matching (Interspeech 2025)
 
 This repository is the **official** implementation of *<img src="./img/mike.png" width="15px" align="center">RapFlow-TTS: Rapid High-Fidelity Text-to-Speech via Improved Consistency Flow Matching*. 
 
