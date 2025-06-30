@@ -271,6 +271,12 @@ Example:
 ## Citation
 
 ```
+@article{park2025rapflow,
+  title={RapFlow-TTS: Rapid and High-Fidelity Text-to-Speech with Improved Consistency Flow Matching},
+  author={Park, Hyun Joon and Liu, Jeongmin and Kim, Jin Sob and Yang, Jeong Yeol and Han, Sung Won and Song, Eunwoo},
+  journal={arXiv preprint arXiv:2506.16741},
+  year={2025}
+}
 ```
 
 ## License
