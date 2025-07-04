@@ -63,7 +63,7 @@ model:
     num_segments:   2
     boundary:       0.9
     alpha:          1e-5
-    total_epoch:    1400             # match this epoch with train.epoch
+    total_epoch:    1400             # match this epoch with train.epoch, 700 epoch is enough
     delta_t:        [0.1, 0.001]
     delta_schedule: 'linear'
     delta_bin:      8 
@@ -74,7 +74,7 @@ train:
   encoder_freeze:  True # encoder freeze
   stage:           2
   prev_stage_ckpt: './checkpoints-ljs/RapFlow-TTS-0/model-last.pth'  # path for LJSpeech stage 1
-  epoch:           1400
+  epoch:           1400  # 700 epoch is enough
   batch_size:      32
   save_epoch:      200
   syn_every:       200
