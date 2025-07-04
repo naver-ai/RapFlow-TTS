@@ -222,10 +222,10 @@ Configurations:
     ├── test
 ```
 
-For stage 3, we set additional 150 and 50 epochs for LJSpeech and VCTK datasets. Considering the fluctuation of discriminator loss, epochs are empirically decided. Using models after loss fluctuation increased may result in a poor synthesis quality, thus loss should be monitored when selecting adversarial learning checkpoints.
+For stage 3, we set additional 150 and 50 epochs for LJSpeech and VCTK datasets. Considering the fluctuation of training discriminator loss, epochs are empirically decided. Using models after loss fluctuation increased may result in a poor synthesis quality; thus, loss should be monitored when selecting adversarial learning checkpoints.
 
 
-<p align="center"> <img src="./img/train_disc loss_ljs.png" alt="Train Disc Loss LJS" width="45%"/> <img src="./img/train_disc loss_vctk.png" alt="Train Disc Loss VCTK" width="40.5%"/> </p> <p align="center"> <strong>Figure: Discriminator Loss Comparison (LJSpeech and VCTK Datasets)</strong> </p>
+<p align="center"> <img src="./img/train_disc loss_ljs.png" alt="Train Disc Loss LJS" width="45%"/> <img src="./img/train_disc loss_vctk.png" alt="Train Disc Loss VCTK" width="40.5%"/> </p> <p align="center"> <strong>Figure: Training Discriminator Loss Comparison (LJSpeech and VCTK Datasets)</strong> </p>
 
 
 <!-- <p align="center">
