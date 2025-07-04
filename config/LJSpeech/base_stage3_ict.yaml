@@ -63,7 +63,7 @@ model:
     num_segments:   2
     boundary:       0.9
     alpha:          1e-5
-    total_epoch:    1400
+    total_epoch:    1400  
     delta_t:        [0.1, 0.001]
     delta_schedule: 'linear'
     delta_bin:      8 
@@ -87,7 +87,7 @@ train:
   use_reg:         False
   use_fm:          True
   use_mse:         True
-  epoch:           150
+  epoch:           300 # monitoring the loss and decide epochs or checkpoint  
   batch_size:      32
   save_epoch:      50
   syn_every:       50
