@@ -86,7 +86,7 @@ train:
   use_reg:         False
   use_fm:          True
   use_mse:         True
-  epoch:           50
+  epoch:           100 # monitoring the loss and decide epochs or checkpoint  
   batch_size:      32
   save_epoch:      25
   syn_every:       25
