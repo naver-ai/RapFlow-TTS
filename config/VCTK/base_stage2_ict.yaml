@@ -62,10 +62,10 @@ model:
     num_segments:   2
     boundary:       0.9
     alpha:          1e-5
-    total_epoch:    1000
+    total_epoch:    1000  # 500 epoch is enough
     delta_t:        [0.1, 0.001]
-    delta_schedule: 'linear'
-    delta_bin:      8 
+    delta_schedule: 'linear' 
+    delta_bin:      8  # consider to use 4 if using 500 epochs
     use_d_schedule: True
     loss_type:      'huber'
   
@@ -73,7 +73,7 @@ train:
   encoder_freeze:  True
   stage:           2
   prev_stage_ckpt: './checkpoints-vctk/RapFlow-TTS-0/model-last.pth'
-  epoch:           1000
+  epoch:           1000 # 500 epoch is enough
   batch_size:      32
   save_epoch:      200
   syn_every:       200
