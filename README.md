@@ -265,7 +265,15 @@ Example:
 
 ## Pre-trained Models
 
+We provide [pre-trained weights](https://github.com/naver-ai/RapFlow-TTS/releases/tag/checkpoint) for the LJSpeech and VCTK datasets.
 
+Note:
+
+These checkpoints were trained in a different environment and with modified configurations compared to the original setup described in the paper. As a result, there may be slight performance differences, and we observed a slight performance decrease.
+
+For LJSpeech, we found that 700 epochs for Stages 1 and 2 were sufficient. For VCTK, 500 epochs for each stage were sufficient, and we also modified the number of delta bins in this case.
+
+The provided Stage 3 checkpoints for each dataset were selected based on loss curves and correspond to 200 and 50 epochs, respectively.
 
 
 ## Citation
