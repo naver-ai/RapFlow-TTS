@@ -10,7 +10,7 @@ In this repository, we provide steps for running *RapFlow-TTS*.
 *RapFlow-TTS* is an ODE-based TTS that can synthesize high-quality speech with fewer steps using improved consistency flow matching. The overall architecture of *RapFlow-TTS* is as below:
 
 <p align="center">
-  <img src="./img/rapflowtts.png" alt="RapFlow-TTS" style="width: 70%;">
+  <img src="./img/rap.png" alt="RapFlow-TTS" style="width: 70%;">
 </p>
 
 ## Requirements & Installation
